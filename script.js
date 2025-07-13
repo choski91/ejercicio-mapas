@@ -1,9 +1,16 @@
-var map = L.map('map').setView([-34.60, -58.43], 5);
+var map = L.map('mapUno').setView([-34.60, -58.43], 5);
 
 var OpenStreetMap_CAT = L.tileLayer('https://tile.openstreetmap.bzh/ca/{z}/{x}/{y}.png', {
-  maxZoom: 5,
-  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Tiles courtesy of <a href="https://www.openstreetmap.cat" target="_blank">Breton OpenStreetMap Team</a>'
+maxZoom: 5,
+attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Tiles courtesy of <a href="https://www.openstreetmap.cat" target="_blank">Breton OpenStreetMap Team</a>'
 }).addTo(map);
+
+var mapDos = L.map('mapaDos').setView([-34.60, -58.43], 5);
+
+var OpenStreetMap_CAT2 = L.tileLayer('https://tile.openstreetmap.bzh/ca/{z}/{x}/{y}.png', {
+maxZoom: 5,
+attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Tiles courtesy of <a href="https://www.openstreetmap.cat" target="_blank">Breton OpenStreetMap Team</a>'
+}).addTo(mapDos);
 
 async function getData() {
   try {
@@ -141,4 +148,33 @@ for (let i = 0; i < data.length; i++){
 });
 
 
+document.getElementById("mag").addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  const magnitudFiltradaMin = event.target.magnitudUno.value;
+  console.log(magnitudFiltradaMin)
+  const magnitudFiltradaMax = event.target.magnitudDos.value;
+  console.log(magnitudFiltradaMax)
+  const dateStartFiltrada = event.target.startDate.value;
+  console.log(dateStartFiltrada)
+  const dateEndFiltrada = event.target.endDate.value;
+  console.log(dateEndFiltrada)
+
+async function getData() {
+  try {
+    const res = await fetch(`https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=${dateStartFiltrada}&endtime=${dateEndFiltrada}&minmagnitude=${magnitudFiltradaMin}&maxmagnitude=${magnitudFiltradaMax}`);
+    const data = await res.json();
+    return data.features;
+  } catch (error) { 
+    console.log(error);
+  }
+}
+getData().then(data => {
+  console.log("pintando terremotos")
+  for (let i = 0; i < data.length; i++){ 
+  const coordenadas = [data[i].geometry.coordinates[1],data[i].geometry.coordinates[0]];
+  const marker = L.marker(coordenadas).addTo(mapDos)
+  }
+});
+});
 

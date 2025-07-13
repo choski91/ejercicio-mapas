@@ -15,27 +15,41 @@
 </head>
 
 <body>
+
+    <div class="map" id="mapUno"></div>
     <section>
-        <h2>Filtro por magnitud</h2>
-        <form>
-            <select required>
-                <option value="magUno">Magnitud de 0 a 5</option>
-                <option value="magDos">Magnitud de 5 a 7</option>
+        <h2>Filtro por magnitud y fecha</h2>
+        <form id="mag">
+            <label for="magnitudUno">Magnitud Mínima:</label>
+            <select id="magnitudUno" required>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
             </select>
-            <button type="submit">Seleccionar</button>
+            <br><br><label for="magnitudDos">Magnitud Máxima:</label>
+            <select id="magnitudDos" required>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+            </select>
+            <br><br>
+            <label for="startDate">Fecha de inicio:</label>
+            <input type="date" id="startDate" name="startDate">
+            <br><br>
+            <label for="endDate">Fecha de fin:</label>
+            <input type="date" id="endDate" name="endDate">
+            <br><br><button id="magnitud" type="submit">Seleccionar</button>
         </form>
     </section>
-    <section>
-        <h2>Filtro por fecha</h2>
-        <form>
-            <select required>
-                <option value="startDate">Fecha de inicio</option>
-                <option value="endDate">Fecha de fin</option>
-            </select>
-            <button type="submit">Seleccionar</button>
-        </form>
-    </section>
-    <div id="maps">
+    <div class="map" id="mapaDos">
 
     </div>
     <script src="./script.js"></script>
