@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="https://unpkg.com/leaflet@latest/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-providers@latest/leaflet-providers.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Todo sobre terremotos</h1>
+    </header>
+    <main>
+        <div class="map" id="mapUno"></div>
+        <section>
+            <h2>Filtro por magnitud y fecha</h2>
+            <form id="mag">
+                <label for="magnitudUno">Magnitud Mínima:</label>
+                <select id="magnitudUno" required>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                </select>
+                <br><br><label for="magnitudDos">Magnitud Máxima:</label>
+                <select id="magnitudDos" required>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                </select>
+                <br><br>
+                <label for="startDate">Fecha de inicio:</label>
+                <input type="date" id="startDate" name="startDate">
+                <br><br>
+                <label for="endDate">Fecha de fin:</label>
+                <input type="date" id="endDate" name="endDate">
+                <br><br><button id="magnitud" type="submit">Seleccionar</button>
+            </form>
+        </section>
+        <div class="map" id="mapaDos">
+
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 Terremotos</p>
+    </footer>
+    <script src="./script.js"></script>
+</body>
+
+</html>
