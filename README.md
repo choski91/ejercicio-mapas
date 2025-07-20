@@ -1,7 +1,6 @@
 ![alt text](titulo.png)
 
-🌍 Visualizador de Terremotos Globales en Tiempo Real
-Este proyecto es una aplicación web interactiva que muestra terremotos de todo el mundo en tiempo real utilizando la librería de mapas Leaflet.js. Desarrollado individualmente, el objetivo principal fue visualizar la actividad sísmica global de manera intuitiva y permitir a los usuarios filtrar eventos por magnitud y rango de fechas.
+🌍 Este proyecto es una aplicación web interactiva que muestra terremotos de todo el mundo en tiempo real utilizando la librería de mapas Leaflet.js. Desarrollado individualmente, el objetivo principal fue visualizar la actividad sísmica global de manera intuitiva y permitir a los usuarios filtrar eventos por magnitud y rango de fechas.
 
 🌟 Características Principales
 Visualización en Mapa: Muestra la ubicación de los terremotos en un mapa interactivo.
@@ -14,22 +13,6 @@ Popups Detallados: Al hacer clic en un marcador, se despliega una ventana emerge
 
 Filtros Interactivos: Permite a los usuarios filtrar terremotos por rango de magnitud y período de tiempo (fecha de inicio y fecha de fin).
 
-Dos Mapas Simultáneos: Presenta un mapa principal con todos los terremotos del día y un segundo mapa para visualizar los resultados de la búsqueda filtrada.
-
-
-🌍 Visualizador de Terremotos Globales en Tiempo Real
-
-Este proyecto es una aplicación web interactiva que muestra terremotos de todo el mundo en tiempo real utilizando la librería de mapas [Leaflet.js](https://leafletjs.com/). Desarrollado individualmente, el objetivo principal fue visualizar la actividad sísmica global de manera intuitiva y permitir a los usuarios filtrar eventos por magnitud y rango de fechas.
-
----
-
-🌟 Características Principales
-
-Visualización en Mapa: Muestra la ubicación de los terremotos en un mapa interactivo.
-Datos en Tiempo Real: Obtiene información actualizada sobre terremotos de una API pública del USGS (U.S. Geological Survey).
-Iconografía Dinámica: Los marcadores de terremotos cambian de color según su magnitud, facilitando la identificación rápida de la intensidad.
-Popups Detallados: Al hacer clic en un marcador, se despliega una ventana emergente con información relevante del terremoto (título, magnitud, fecha, ubicación, etc.).
-Filtros Interactivos: Permite a los usuarios filtrar terremotos por rango de magnitud y período de tiempo (fecha de inicio y fecha de fin).
 Dos Mapas Simultáneos: Presenta un mapa principal con todos los terremotos del día y un segundo mapa para visualizar los resultados de la búsqueda filtrada.
 
 ---
@@ -78,14 +61,12 @@ Para ejecutar este proyecto localmente, sigue estos pasos:
 
 Clona el repositorio:
 
-Bash
-
 git clone <https://github.com/choski91/ejercicio-mapas.git>
+
 Navega al directorio del proyecto:
 
-Bash
-
 cd <ejercicio-mapas>
+
 Abre el archivo index.html: Simplemente abre el archivo index.html en tu navegador web preferido. 
 
 🗺️ Estructura del Proyecto
